@@ -1,0 +1,60 @@
+.cajal {
+  background-color: #fafafa;
+  margin: 20 px;
+  width: 400px;
+  height: 300px;
+  border: 2px solid #ccc;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-right: 500px;
+  /*  */
+
+}
+.caja2{
+
+  background-color: #004E63;
+  border-color: #004E63;
+  height: 50px;
+  border: 2px solid #004E63;
+  margin-top: -320px;
+  margin-left: 580px;
+  margin-right: 550px;
+}
+
+hr{
+  height: 2px;
+  background-color: #CACACA;
+}
+.Input{
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+
+.btn{
+  margin-left: 70px;
+  background-color: #004E63;
+  height: 38px;
+  width: 250px;
+  color: white;
+  font-family: "Segoe UI";
+
+}
+h3{
+  margin-left: 80px;
+  margin-top: 7px;
+  margin-right: 550px;
+  color: white;
+  font-family: "Segoe UI";
+}
+.botoneslibres{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+
+}

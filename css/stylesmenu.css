@@ -1,0 +1,272 @@
+.menu {
+  background-color: #fafafa;
+  margin: 0;
+  width: 250px; /*ancho caja*/
+  padding: 10px;
+  height: 660px;
+  margin-left: 0px;
+  border: 2px solid #232323;
+  background: #232323;
+  text-align: center;
+}
+.barra{
+  background-color: #004E63;
+  border-color: #004E63;
+  height: 50px;
+  border: 2px solid #004E63;
+  width: 250px;
+  margin-top: -620px;
+  margin-left: 0px;
+
+
+
+}
+.p{
+  margin-left: 36px;
+  margin-top: 12px;
+  color: white;
+  font-size: 14px;
+  font-family: "Segoe UI";
+}
+.botones{
+  color:white;
+  background-color: #232323;
+  height: 40px;
+  width: 228px;
+  margin-left: -6px;
+  margin-right: 100px;
+  border-color: #232323;
+  margin-top: 10px;
+
+}
+.contenedor1 {
+  background-color: #d6d6d6;
+  opacity: 50%;
+  margin: 20 px;
+  width: 1110px;
+  height: 667px;
+  border: 2px solid #ccc;
+  margin-top: -96px;
+  margin-left: 250px;
+  margin-right: 100x;
+}
+.contenedor2 {
+  background-color: white;
+  opacity: 60%;
+  margin: 20 px;
+  width: 1065px;
+  height: 650px;
+  border: 3px solid #white;
+  margin-top: -630px;
+  margin-left: 275px;
+  margin-right: 300px;
+}
+.Titulos{
+  font-size: 20px;
+  margin-top: 4px;
+  color: black;
+  font-family: "Segoe UI";
+  font-size: 20px;
+
+}
+.linea{
+  width:1065px;
+  border-width: 2.3px;
+  border-color: #004E63;
+
+}
+.Inputs{
+  margin-left: 70px;
+  margin-top: 40px;
+}
+.prueba{
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+.inputs2{
+  margin-left: 25px;
+}
+.boton{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 280px;
+
+}
+.ls{
+  width: 350px;
+  margin-top: 4px;
+}
+.bt1{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 40px;
+}
+.bt2{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 40px;
+}
+.pa{
+  text-align: center;
+  color: black;
+  margin-left: 27px;
+}
+.bt3{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 200px;
+}
+.btn4{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 100px;
+
+}
+.recu{
+  margin-left: 400px;
+}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.Recuperacion1{
+  background-color: #d6d6d6;
+  opacity: 50%;
+  margin: 20 px;
+  width: 1350px;
+  height: 667px;
+  border: 2px solid #ccc;
+  margin-top: -96px;
+  margin-left: 5px;
+  margin-right: 100x;
+
+}
+.Recuperacion2 {
+  background-color: white;
+  opacity: 60%;
+  margin: 20 px;
+  width: 1100px;
+  height: 595px;
+  border: 3px solid #white;
+  margin-top: -630px;
+  margin-left: 180px;
+  margin-right: 300px;
+}
+.PRecu{
+  margin-left: 510px;
+  margin-top: -420px;
+}
+.Inputs3{
+    margin-left: 280px;
+}
+.botonespconsultar{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 150px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: auto;
+margin-right: auto;
+float: center;
+}
+.botongasto{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 150px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 700px;
+
+
+}
+.veri{
+  background-color: #004E63;
+  color: white;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 100px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 20px;
+
+
+}
+.rcontra{
+  margin-left: 300px;
+  margin-top: 20px;
+
+}
+.ex1 {
+  width: auto;
+  height: 350px;
+  overflow: scroll;
+
+  }
+
+.sa{
+  background-color: #004E63;
+  color: white;
+  border-radius: 10px;
+  border-bottom: #004E63;
+  border-color: #004E63;
+  width: 115px;
+  height: 32px;
+  font-family: "Segoe UI";
+  margin-left: 100px;
+  margin-top: -600px;
+
+}
+.tabla2{
+  width: auto;
+  height: 250px;
+  overflow: scroll;
+
+
+}
