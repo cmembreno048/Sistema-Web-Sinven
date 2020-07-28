@@ -1,64 +1,61 @@
 <?php
+//include ("Web_Service_Res.php");
 
 Session_start();
 
 class InicioSesion {
 
-  var $usuario;
-  var $contrasenia;
-  var $conexion;
+  function validacionUsCon($usuario, $contrasenia, $conexion){
 
-  function __construct($usuario, $contrasenia, $conexion)
-  {
-    $this->usuario = $usuario;
-    $this->contrasenia = $contrasenia;
-    $this->conexion = $conexion;
+    $lista = array();
+    $objasnwer = new stdClass();
 
-  }
+    if ($usuario && $contrasenia != "") {
+      
+      $SelUsuario = "select id_usuario,contrasenia,nombre_usuario,apellido_usuario,codigo_tipo_usuario  from tbl_ms_registro_usuario where contrasenia = '".$contrasenia."' and id_usuario = '".$usuario."'";
 
+      $request_consulta = mysqli_query($conexion, $SelUsuario);
 
-  function validacionUsCon(){
+      $resultado = mysqli_fetch_array($request_consulta);
 
+            if ($resultado != null) {
+                    
+                  $nombreusuario = $resultado['nombre_usuario']." ".$resultado['apellido_usuario'];
 
-    $SelUsuario = "select id_usuario from tbl_ms_registro_usuario where id_usuario = '".$this->usuario."'";
-
-    $result = mysqli_query($this->conexion, $SelUsuario);
-
-    $row = mysqli_fetch_array($result);
-
-    if($row != null){
-
-      $SelUsuario2 = "select contrasenia,nombre_usuario,apellido_usuario,codigo_tipo_usuario  from tbl_ms_registro_usuario where contrasenia = '".$this->contrasenia."'";
-      $result2 = mysqli_query($this->conexion, $SelUsuario2);
-
-      $row2 = mysqli_fetch_array($result2);
-
-      if ($row2 != null) {
-
-        $respuesta = $row2['nombre_usuario'];
-        $nombreusuario = $row2['nombre_usuario']." ".$row2['apellido_usuario'];
-        $_SESSION["nombreusuario"] = $nombreusuario;
-        $_SESSION["tipousuario"] = $row2['codigo_tipo_usuario'];
-        $_SESSION["newsession"] = $respuesta;
-        echo "1";
+                  $_SESSION["nombreusuario"] = $nombreusuario;
+                  $_SESSION["tipousuario"] = $resultado['codigo_tipo_usuario'];
+                  $_SESSION["newsession"] = $nombreusuario;
 
 
-      } else {
-        echo "2";
-      }
+                  
+                  $objasnwer->status = 1;
+                  $objasnwer->data = "Correcto";
+                  $lista = $objasnwer;
+                  
 
-  }else {
-    echo "3";
+                  return $lista;
+
+            }else {
+            
+                $objasnwer->status = 0;
+                $objasnwer->data = "Incorrrecto";
+                $lista = $objasnwer;
+                return $lista;
+            }
+      
+      
+
+    }else {
+        
+      $objasnwer->status = 0;
+      $objasnwer->data = "Incorrrecto";
+      $lista = $objasnwer;
+       return $lista;
+      
+    }
+
   }
 
 }
 
-
-
-
-}
-
-
-
-
- ?>
+?>

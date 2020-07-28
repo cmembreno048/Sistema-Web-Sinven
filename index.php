@@ -12,15 +12,18 @@
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" href="imagenes/icono.png">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<link rel="stylesheet" href="css/fondo_Imagen_login.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>') 
+	</script>
 	<script src="js/material.min.js" ></script>
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
 	<script src="js/JavaScript/jsiniciosesion.js" ></script>
 </head>
-<body style="background:#ABD2EC;" class="cover">
+<body >
 	<div class="container-login" >
 		<p class="text-center" style="font-size: 80px;">
 		
@@ -28,20 +31,24 @@
 <h4 class="text-center text-condensedLight" > Sistema Inventario Y Ventas </h4>
 		<form>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="usuario" required >
+			    <input class="mdl-textfield__input" type="text" id="usuario"  >
 			    <label class="mdl-textfield__label" for="usuario">Usuario</label>
 			</div>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="password" id="contrasenia" required >
+			    <input class="mdl-textfield__input" type="password" id="contrasenia"  >
 			    <label class="mdl-textfield__label" for="contrasenia">Contraseña</label>
 			</div>
 
 			 <center><button type="button" onclick="ValidarInicoSesion()" class="mdl-button mdl-js-button mdl-js-ripple-effect"
 					style=" background-color: #71C5FC; float:rigt;"name="button"> Iniciar Sesión  </button></center>
 					<br>
-				<div class="mdl-button mdl-js-button mdl-js-ripple-effect" align="right">
-						<center> <a href="#"  >¿Olvido su contraseña?</a> </center>
-				</div>
+
+				<center><div class="Error_">
+					<p id="Error_" ></p>
+				</div></center>
+
+				<center> <a href="#"  > <span>¿Olvido su contraseña?</span> </a> </center>
+				
 		</form>
 
 	</div>
@@ -51,9 +58,11 @@
 
 <script type="text/javascript">
 		$('.mdl-textfield__input').keypress( function(e){
+
 				if (e.keyCode == 13 ) {
-					ValidarInicoSesion();
+				ValidarInicoSesion();
 				}
+				
 		});
 </script>
 

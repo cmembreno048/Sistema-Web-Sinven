@@ -5,38 +5,37 @@ function ValidarInicoSesion(){
   if (usuario != "" && contrasenia != "") {
 
     $.post(
-      "../../ajax/ajaxiniciosesion.php",
+      "../../Web_Service/WS_inicio_sesion.php",
       {
+
         "usuario":usuario,
         "contrasenia":contrasenia,
 
       }  ,
       function(data){
-          alert(data);
-        validacionusuario(data);
+          var res = JSON.parse(data)
+          
+          if (res.status == "1") {
+            
+              location.href="../../home.php";
+
+          }else{
+
+            document.getElementById("Error_").innerHTML = "Verifique Los datos.";
+  
+          }
+        
       }
 
     );
 
   } else {
-        alert("Verifique que los campos esten llenos");
+    document.getElementById("Error_").innerHTML = "Verifique Los datos.";
+ 
+
   }
 
 
 }
 
 
-function validacionusuario(dato){
-
-    if (dato == "1") {
-      location.href="../../home.php";
-    }else if (dato == "1") {
-      alert("Los datos ingresados no coinciden o no existe el usuario");
-    }else if (dato == "3") {
-      alert("Los datos ingresados no coinciden o no existe el usuario");
-    }
-
-
-
-
-}

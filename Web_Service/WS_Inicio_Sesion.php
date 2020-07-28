@@ -4,15 +4,10 @@
   include("../clases/InicioSesion.php");
 
 
-if (isset($_POST)) {
-
   $usuario = $_POST["usuario"];
   $contrasenia = $_POST["contrasenia"];
 
-  $objiniciosesion = new InicioSesion($usuario, $contrasenia, $conexion);
-  echo $objiniciosesion->validacionUsCon();
-
-}
-
+  $objiniciosesion = new InicioSesion();
+  echo Json_encode($objiniciosesion->validacionUsCon($usuario, $contrasenia, $conexion));
 
  ?>
