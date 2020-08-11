@@ -13,6 +13,7 @@ function ValidarInicoSesion(){
 
       }  ,
       function(data){
+
           var res = JSON.parse(data)
           
           if (res.status == "1") {

@@ -7,7 +7,7 @@ class InicioSesion {
 
   function validacionUsCon($usuario, $contrasenia, $conexion){
 
-    $lista = array();
+    $data = array();
     $objasnwer = new stdClass();
 
     if ($usuario && $contrasenia != "") {
@@ -20,39 +20,37 @@ class InicioSesion {
 
             if ($resultado != null) {
                     
-                  $nombreusuario = $resultado['nombre_usuario']." ".$resultado['apellido_usuario'];
+                $nombreusuario = $resultado['nombre_usuario']." ".$resultado['apellido_usuario'];
 
-                  $_SESSION["nombreusuario"] = $nombreusuario;
-                  $_SESSION["tipousuario"] = $resultado['codigo_tipo_usuario'];
-                  $_SESSION["newsession"] = $nombreusuario;
+                $_SESSION["nombreusuario"] = $nombreusuario;
+                $_SESSION["tipousuario"] = $resultado['codigo_tipo_usuario'];
+                $_SESSION["newsession"] = $nombreusuario;
 
-
-                  
-                  $objasnwer->status = 1;
-                  $objasnwer->data = "Correcto";
-                  $lista = $objasnwer;
-                  
-
-                  return $lista;
-
+                $objasnwer->status = 1;
+                $objasnwer->nombre = $nombreusuario;
+                $objasnwer->tipo_usuario = $_SESSION["tipousuario"];
+                $data = $objasnwer;
+ 
             }else {
             
                 $objasnwer->status = 0;
                 $objasnwer->data = "Incorrrecto";
-                $lista = $objasnwer;
-                return $lista;
+                $data = $objasnwer;
+                
             }
       
       
-
+            return $data;   
     }else {
         
       $objasnwer->status = 0;
       $objasnwer->data = "Incorrrecto";
-      $lista = $objasnwer;
-       return $lista;
+      $data = $objasnwer;
+      
       
     }
+
+    return $data;
 
   }
 

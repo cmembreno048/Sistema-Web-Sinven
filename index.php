@@ -31,7 +31,7 @@
 <h4 class="text-center text-condensedLight" > Sistema Inventario Y Ventas </h4>
 		<form>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="usuario"  >
+			    <input class="mdl-textfield__input" type="text" id="usuario" >
 			    <label class="mdl-textfield__label" for="usuario">Usuario</label>
 			</div>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

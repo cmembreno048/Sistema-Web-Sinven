@@ -1,8 +1,5 @@
 <?php
 
-/**
- *
- */
 class Productos
 {
 
@@ -14,19 +11,9 @@ class Productos
   var $unidad_medida ;
   var $conexion;
 
-  function __construct($nombre_corto,$descripcion ,$precio_may ,$precio_min ,$categoria_prod , $unidad_medida, $conexion)
-  {
-    $this->nombre_corto = $nombre_corto;
-    $this->descripcion = $descripcion;
-    $this->precio_may = $precio_may;
-    $this->precio_min = $precio_min;
-    $this->categoria_prod = $categoria_prod;
-    $this->unidad_medida = $unidad_medida;
-    $this->conexion = $conexion;
+  
 
-  }
-
-function registrarproducto(){
+  function registrarproducto($nombre_corto,$descripcion ,$precio_may ,$precio_min ,$categoria_prod , $unidad_medida, $conexion){
     if (trim($this->nombre_corto)!= ""  &&  trim($this->descripcion)!= "" &&  trim($this->precio_may)!= ""  &&  trim($this->precio_min)!= "" ) {
       $fecha = date("Y-m-d");
       $existencia = 0;
@@ -39,8 +26,32 @@ function registrarproducto(){
       echo $resutaldo = "2";
     }
 
+  }
+  function obtener_Productos($conexion){
 
-}
+      $array_response = array();
+      $consultarproductos = "SELECT secuencia_registro_producto,descripcion_producto,existencia_actual FROM tbl_mp_registro_maestro_productos";
+
+      $result = mysqli_query($conexion, $consultarproductos);
+
+      $filas = mysqli_fetch_array($result);
+
+      while($filas != null){
+
+        $classobjresponse = new stdClass();
+
+        $classobjresponse->cod_producto = $filas["secuencia_registro_producto"];;
+        $classobjresponse->descripcion = $filas["descripcion_producto"];;
+        $classobjresponse->existencia = $filas["existencia_actual"];;
+
+        array_push($array_response, $classobjresponse);
+
+        $filas = mysqli_fetch_array($result);
+
+      }
+     return $array_response;
+
+  }
 
 }
 
