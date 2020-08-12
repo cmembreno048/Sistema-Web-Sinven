@@ -21,41 +21,33 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
-	<script src="js/JavaScript/jsiniciosesion.js" ></script>
+	<script src="js/JavaScript/jsrecuperarcontraseña.js" ></script>
 </head>
 <body >
 	<div class="container-login" >
 		<p class="text-center" style="font-size: 80px;">
 		
-<i class="zmdi zmdi-account"></i>		</p>
-<h4 class="text-center text-condensedLight" > Sistema Inventario Y Ventas </h4>
+<i class="zmdi zmdi-email-open"></i>		</p>
+<h4 class="text-center text-condensedLight" > Recuperacion de contraseña por correo </h4>
 		<form>
+
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="text" id="usuario" >
-			    <label class="mdl-textfield__label" for="usuario">Usuario</label>
-			</div>
-			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    <input class="mdl-textfield__input" type="password" id="contrasenia"  >
-			    <label class="mdl-textfield__label" for="contrasenia">Contraseña</label>
+			    <input class="mdl-textfield__input" type="text" id="usuariorec" >
+				<label class="mdl-textfield__label" for="usuariorec">Usuario</label>
+				
 			</div>
 
-			 <center><button type="button" onclick="ValidarInicoSesion()" class="mdl-button mdl-js-button mdl-js-ripple-effect"
-					style=" background-color: #71C5FC; float:rigt;"name="button"> Iniciar Sesión  </button></center>
+			<center> <h5 id="alerta" class="alerta_recuperacion"></h5> </center>
+			
+			 <center><button type="button" onclick="verificarusuario()" class="mdl-button mdl-js-button mdl-js-ripple-effect"
+					style=" background-color: #71C5FC; float:rigt;"name="button"> Enviar Correo  </button></center>
 					<br>
 
-				<center><div class="Error_">
-					<p id="Error_" ></p>
-				</div></center>
-
-				<center> <a href="recuperacion_contraseña.php"  > <span>¿Olvido su contraseña?</span> </a> </center>
-				
 		</form>
 
 	</div>
 	
 </body>
-
-
 <script type="text/javascript">
 		$('.mdl-textfield__input').keypress( function(e){
 
@@ -65,6 +57,5 @@
 				
 		});
 </script>
-
 
 </html>

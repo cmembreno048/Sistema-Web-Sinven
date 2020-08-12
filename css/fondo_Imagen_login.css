@@ -29,3 +29,7 @@ a{
     color: rgb(15, 1, 63);
   }
   
+.alerta_recuperacion
+{
+  color: red;
+}
